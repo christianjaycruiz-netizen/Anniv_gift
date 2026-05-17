@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <title>Virtual Letter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="your-song-link.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="custom-alert" class="hidden">
+    <p id="alert-message"></p>
+    <button onclick="closeAlert()">OK</button>
+</div>
+ 
+    <div class="container">
+       <section id="lockscreen" class="active">
+    <div class="lockscreen-background"> <div class="glass-card">
+            <h2>For Anniv Only</h2>
+            <h3>Enter the secret code</h3>
+            <p><h8>mag desktop mode kapo lablab</h8></p>
+            <div class="passcode-inputs">
+                <input type="password" maxlength="1" class="code">
+                <input type="password" maxlength="1" class="code">
+                <input type="password" maxlength="1" class="code">
+                <input type="password" maxlength="1" class="code">
+            </div>
+            <button id="unlock-btn">Unlock</button> 
+        </div>
+    </div>
+</section>
+
+        <section id="letter-screen">
+           <div class="paper">
+    <div class="header">
+        <span class="title">Dear My Lovely,</span>
+        <span class="date">MAY 17, 2026</span>
+    </div>
+
+    <div class="content">
+    <p id="typing-text"></p>
+</div>
+
+<div class="signature-group">
+    <p class="with-love">With love,</p>
+    <p class="signature">Chokie</p>
+    <button id="view-photos" class="final-next-btn">NEXT?</button>
+</div>
+</div>
+        </section>
+
+        <section id="gallery-screen">
+    <div class="collage-background">
+        <div class="collage-header">
+            <center><h3><p class="memories-label">For You</p></h3></center>
+            <center><h2 class="collage-title">Photo Natin</h2></center>
+            <center><h3><p class="subtitle">Tap any pics to view it</p></h3></center>
+            <div class="button-row">
+                <center><button class="btn-white" onclick="backToLetter()">BACK TO LETTER</button></center>
+            </div>
+        </div>
+
+      <div class="polaroid-grid">
+    <div class="polaroid vid-1">
+        <video id="vid1" class="zoomable" controls>
+            <source src="drive-download-20260427T175036Z-3-001/VID_20251210_193734_146.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="polaroid vid-2">
+        <video id="vid2" class="zoomable" controls>
+            <source src="drive-download-20260427T175036Z-3-001/20260212_063708245.mp4" type="video/mp4">
+        </video>
+    </div>
+            
+        <div class="polaroid pic-1"><img id="pic1" class="zoomable" src="drive-download-20260427T175036Z-3-001/pic1.jpeg"></div>
+    <div class="polaroid pic-2"><img id="pic2" class="zoomable" src="drive-download-20260427T175036Z-3-001/pic2.jpg"></div>
+    <div class="polaroid pic-3"><img id="pic3" class="zoomable" src="drive-download-20260427T175036Z-3-001/pic3.jpg"></div>
+    <div class="polaroid pic-4"><img id="pic4" class="zoomable" src="drive-download-20260427T175036Z-3-001/pic4.jpg"></div>
+    <div class="polaroid pic-5"><img id="pic5" class="zoomable" src="drive-download-20260427T175036Z-3-001/pic5.jpeg"></div>
+    <div class="polaroid pic-6"><img id="pic6" class="zoomable" src="drive-download-20260427T175036Z-3-001/pic6.jpeg"></div>
+</div>
+    </div>
+</section>
+
+<div id="lightbox" class="hidden">
+    <div class="overlay" onclick="closeLightbox()"></div>
+
+    <div class="zoom-card">
+        <button class="close-btn" onclick="closeLightbox()">CLOSE</button>
+        
+        <img id="lightbox-img" src="" alt="Zoomed memory">
+        
+        <p class="counter">PHOTO <span id="current-photo-num">1</span> OF <span id="total-photos-num">8</span></p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
